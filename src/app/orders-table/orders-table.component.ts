@@ -19,7 +19,7 @@ export class OrdersTableComponent implements AfterViewInit {
 
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', ];
+  displayedColumns = ['id', 'nome', 'data', 'status', 'orderTotal', 'paymentMode'];
 
   constructor() {
     this.dataSource = new OrdersTableDataSource();

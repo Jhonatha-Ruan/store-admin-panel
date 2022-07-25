@@ -10,6 +10,7 @@
 
 .value-text {
     margin: 0;
+    font-weight: bold;
 }
 
 .title-text {
@@ -35,6 +36,7 @@
 
 .card-icon {
     margin-right: 15px;
+    margin-top: -15px;
 }
 
 .card-header {

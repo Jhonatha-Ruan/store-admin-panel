@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { StoreSummary } from '../store-summary/store-summary';
+import { StoreSummaryService } from '../store-summary/store-summary.service';
 
 @Component({
   selector: 'app-dash',
@@ -31,5 +33,15 @@ export class DashComponent {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  miniCardData: StoreSummary[] = [];
+
+  constructor(private breakpointObserver: BreakpointObserver, private summaryService: StoreSummaryService) {}
+
+  ngOnInit() {
+    this.summaryService.getStoreSummary().subscribe({
+      next: (summaryData: StoreSummary[]) => {
+        this.miniCardData = summaryData;
+      }
+    });
+  }  
 }

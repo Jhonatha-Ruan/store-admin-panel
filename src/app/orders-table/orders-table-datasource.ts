@@ -6,32 +6,28 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface OrdersTableItem {
-  name: string;
+  
   id: number;
+  name: string;
+  data: string;
+  status: string;
+  orderTotal: number;
+  paymentMode: string;
+  
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: OrdersTableItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+  {id: 1, name: 'Maria Clara', data: '25/07/2022', status: 'Vendido', orderTotal: 34, paymentMode: 'Pix'},
+  {id: 2, name: 'Valentina', data: '25/07/2022', status: 'Vendido', orderTotal: 25, paymentMode: 'Cartão'},
+  {id: 3, name: 'Gabriel', data: '25/07/2022', status: 'Vendido', orderTotal: 64, paymentMode: 'Pix'},
+  {id: 4, name: 'Davi', data: '25/07/2022', status: 'Vendido', orderTotal: 24, paymentMode: 'Pix'},
+  {id: 5, name: 'Bernardo', data: '25/07/2022', status: 'Vendido', orderTotal: 14, paymentMode: 'Cartão'},
+  {id: 6, name: 'Samuel', data: '25/07/2022', status: 'Vendido', orderTotal: 64, paymentMode: 'Pix'},
+  {id: 7, name: 'Miguel', data: '25/07/2022', status: 'Vendido', orderTotal: 65, paymentMode: 'Cartão'},
+  {id: 8, name: 'Sophia', data: '25/07/2022', status: 'Vendido', orderTotal: 12, paymentMode: 'Boleto'},
+  {id: 9, name: 'Heloísa', data: '25/07/2022', status: 'Vendido', orderTotal: 23, paymentMode: 'Boleto'},
+  {id: 10, name: 'Alice', data: '25/07/2022', status: 'Vendido', orderTotal: 32, paymentMode: 'Pix'},
 ];
 
 /**
